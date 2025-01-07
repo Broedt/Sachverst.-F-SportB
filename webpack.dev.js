@@ -10,6 +10,9 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
+  resolve: {
+    extensions: ['.js', '.json', '.png']
+  },
   devtool: "eval-source-map",
   devServer: {
     watchFiles: ["./src/template.html"],

@@ -1,3 +1,11 @@
-body{
-    background-color: purple;
+
+
+
+#header {
+    display: flex;
+    height: 15vh;
+    justify-content: space-between;
+    background-color: rgb(38, 43, 66);
+    color: beige;
+    font-size: x-large;
 }
