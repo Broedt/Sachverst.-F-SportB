@@ -5,7 +5,30 @@
     display: flex;
     height: 15vh;
     justify-content: space-between;
-    background-color: rgb(38, 43, 66);
-    color: beige;
+    background-color: rgb(40, 42, 46);
+    color: #f5f5dc;
     font-size: x-large;
+    
+}
+
+#infoContent {
+    height: 85vh; 
+    display: flex; 
+    padding-left: 100px; 
+    padding-right: 100px;
+}
+
+#serviceContent {
+    background-image: url(./images/backgroundImg.png);
+    background-repeat: repeat;
+    background-size: 200px;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+#serviceContent div{
+    width: 20vw;
 }
