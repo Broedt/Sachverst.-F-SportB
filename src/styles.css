@@ -16,19 +16,51 @@
     display: flex; 
     padding-left: 100px; 
     padding-right: 100px;
+    
 }
 
-#serviceContent {
+.serviceContent {
     background-image: url(./images/backgroundImg.png);
     background-repeat: repeat;
     background-size: 200px;
     height: 80vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    color: beige;
+    position: relative;
     
 }
 
-#serviceContent div{
+.service{
     width: 20vw;
 }
+
+.popUp {
+    display: flex; 
+    position: absolute; 
+    background-color: rgb(255, 255, 255, 0.5); 
+    color:beige;
+    width: 60%;
+    height: 70%;
+    visibility: hidden;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+    border-radius: 15px;
+}
+.popUp.show {
+    opacity: 1;
+    
+    visibility: visible;
+}
+
+.popUp div {
+    background-image: url(./images/backgroundImg.png);
+    background-repeat: repeat;
+    background-size: 200px;
+}
+

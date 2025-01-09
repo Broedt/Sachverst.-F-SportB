@@ -4,6 +4,9 @@ import picture1 from './images/pexels-sebastian-palomino-2847765.jpg';
 import documentPictogram from './images/document_piktogram.png';
 import sailboatPictogram from './images/sailboat.svg';
 import sawPictogram from './images/saw_piktogram.png';
+import loadPopUp from "./loadPopUp";
+
+
 
 (function initialLoad () {
     const body = document.querySelector('body')
@@ -48,22 +51,33 @@ import sawPictogram from './images/saw_piktogram.png';
 
     infoContent.append(text, picture)
 
+    const popUp = document.createElement('div');
+        popUp.id = 'popUp';
+        popUp.classList = 'popUp';
+        
+        
+    
     const serviceContent = document.createElement('div');
+        serviceContent.classList = "serviceContent";
         serviceContent.id = "serviceContent";
-        serviceContent.style.color = 'beige';
-
+        
             const gutachten = document.createElement('div');
+                gutachten.classList = 'service';
                 gutachten.style.cssText = 'display: flex; flex-direction: column; align-items: center; justify-content: center;'
                 const gutachtenImg = document.createElement('img');
                     gutachtenImg.src = documentPictogram;
-                    gutachtenImg.style.height = '20vh';
-                    gutachtenImg.style.fill = 'red'
+                        gutachtenImg.style.height = '20vh';
                 const gutachtenText = document.createElement('div');
                     gutachtenText.innerHTML = '<h3>Gutachten</h3>SchadenGutachten, WertGutachten, Kurzgutachten';
                     gutachtenText.style.cssText = 'text-align: center;'
                 gutachten.append(gutachtenImg, gutachtenText);
+                gutachten.addEventListener("click", () => {
+                    loadPopUp ();
+                        
+                });
 
             const beratung = document.createElement('div');
+                beratung.classList = 'service';
                 beratung.style.cssText = 'display: flex; flex-direction: column; align-items: center; justify-content: center;'
                 const beratungImg = document.createElement('img');
                     beratungImg.src = sailboatPictogram;
@@ -73,8 +87,13 @@ import sawPictogram from './images/saw_piktogram.png';
                     beratungText.innerHTML = '<h3>Beratung</h3>Kauf- & Verkaufsberatung, Investitionsberatung, Reparaturabnahmen';
                     beratungText.style.cssText = 'text-align: center;'
             beratung.append(beratungImg, beratungText);
+            beratung.addEventListener("click", () => {
+                loadPopUp ();
+                    
+            });
 
             const support = document.createElement('div');
+                support.classList = 'service';
                 support.style.cssText = 'display: flex; flex-direction: column; align-items: center; justify-content: center;'
                 const supportImg = document.createElement('img');
                     supportImg.src = sawPictogram;
@@ -83,13 +102,19 @@ import sawPictogram from './images/saw_piktogram.png';
                 const supportText = document.createElement('div');
                     supportText.innerHTML = '<h3>DIY-Unterastützung</h3>Fachmännische, individuelle Beratung bei der Umsetzung von DIY Projecten';
                     supportText.style.cssText = 'text-align: center;'
-            support.append(supportImg, supportText)
+            support.append(supportImg, supportText);
+            support.addEventListener("click", () => {
+                loadPopUp ();
+                    
+            });
 
-    serviceContent.append(gutachten, beratung, support)
-
+    serviceContent.append(gutachten, beratung, support, popUp);
+    
+    
 
     const footer = document.createElement('div');
         footer.id = "footer"
 
-    body.append(header, infoContent, serviceContent, footer)
+    body.append(header, infoContent, serviceContent, footer);
 })();
+
