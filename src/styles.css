@@ -12,11 +12,16 @@ body {
     justify-content: space-between;
     background-color: rgb(40, 42, 46);
     color: #f5f5dc;
-    font-size: x-large;
     position: fixed;
     z-index: 10;
     
-    
+}
+.navbarItems {
+    font-size: medium;
+    cursor: pointer;
+}
+.navbarItems:hover {
+    font-size: large;
 }
 
 #infoContent {
@@ -26,6 +31,9 @@ body {
     padding-left: 100px; 
     padding-right: 100px;
     
+}
+#infoContent h2,h4{
+    font-weight: 100;
 }
 
 .serviceContent {
