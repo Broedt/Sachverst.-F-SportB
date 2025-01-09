@@ -1,10 +1,14 @@
 import "./styles.css";
+
 import logo1 from './images/SMD_Farbversion_2';
 import picture1 from './images/pexels-sebastian-palomino-2847765.jpg';
 import documentPictogram from './images/document_piktogram.png';
 import sailboatPictogram from './images/sailboat.svg';
 import sawPictogram from './images/saw_piktogram.png';
+import meImg from './images/aboutme.jpg';
+
 import loadPopUp from "./loadPopUp";
+
 
 
 
@@ -39,7 +43,7 @@ import loadPopUp from "./loadPopUp";
 
             const text = document.createElement('div');
                 const heading = document.createElement('div');
-                    heading.innerHTML = '<h1>Sachverständiger für </h1><h1>Sportboote</h1><br><h2>Sören Modery-Diekhans</h2><h4>Segel- & Motorboote bis 24m</h4>'
+                    heading.innerHTML = '<h1>Sachverständiger für </h1><h1>Sportboote</h1><h2>Sören Modery-Diekhans</h2><h4>Segel- & Motorboote bis 24m</h4>'
                     heading.style.cssText = 'line-height: 150%; text-align: center; padding-top: 30px; padding: 30px'
                 const headingText = document.createElement('div');
                     headingText.innerHTML = 'Ob bei einem Schaden, im Streitfall oder beim Kauf oder Verkauf eines Bootes – ein Sachverständiger als neutrale Partei kann Aufklärung, Absicherung und Unterstützung bieten. Die Begutachtung eines Schadens am Boot, durch einen unabhängigen Sachverständigen, ermöglicht die Kostenübernahme einer fachgerechten Reparatur durch eine Versicherung. Durch Fachexpertise gelingt eine umfassende Beurteilung des Bootszustandes und auch nicht sichtbarer Mängel, was sowohl zur Abwicklung von Reparaturen mit Versicherungen als auch beim Kauf von Gebrauchtbooten von Vorteil ist.';
@@ -111,10 +115,35 @@ import loadPopUp from "./loadPopUp";
     serviceContent.append(gutachten, beratung, support, popUp);
     
     
+    const about = document.createElement('div');
+            about.classList = 'about';
+            about.id = 'about';
+            const aboutContent = document.createElement('div');
+                aboutContent.style.cssText = 'display: flex; justify-self: center; align-self: center'
+                aboutContent.innerHTML = 'Hallo,<br>ich bin Sören (geb. 1993) und lebe mit meinen zwei wunderbaren Kindern (geb. 2019 & 2021) und meiner Frau in Lübeck. Ich bin gebürtiger Berliner, doch mein Herz schlägt für Wasser und Meer. Ich bin leidenschaftlicher Segler und Wellenreiter und begeistere mich für alle Sport- und Freizeitaktivitäten im und auf dem Wasser. Schon in jungen Jahren leitete ich eine Segelgilde und segelte erfolgreich Regatten auf der Kieler Woche. Durch die Ausbildung zum Bootsbauer fundierte ich mein Wissen und meine handwerklichen Fähigkeiten. Die Qualifizierung zum anerkannten Sachverständigen für Sportboote ergänzt meine praktischen Erfahrungen. <br>Ich beschreibe mich als offenen, lockeren und wissbegierigen Mann, der sein Wissen gerne an andere Personen weitergibt. '
+            
+            const imgContainer = document.createElement('div');
+                imgContainer.style.cssText = 'display: flex; align-items: center; justify-content: center';
+                const aboutImg = document.createElement('img');
+                    aboutImg.src = meImg;
+                    aboutImg.style.cssText = 'width: 80%'
+                    
+            imgContainer.append(aboutImg)
+                
+
+
+        about.append(imgContainer, aboutContent)
 
     const footer = document.createElement('div');
-        footer.id = "footer"
+        footer.id = "footer";
+        const impressum = document.createElement('div');
+            impressum.innerHTML = 'Impressum';
+        const agb = document.createElement('div');
+            agb.innerHTML = 'AGB';
+        const datenschutz = document.createElement('div');
+            datenschutz.innerHTML = 'datenschutz';
+        footer.append(impressum, agb, datenschutz)
 
-    body.append(header, infoContent, serviceContent, footer);
+    body.append(header, infoContent, serviceContent, about, footer);
 })();
 
