@@ -139,13 +139,23 @@ import loadPopUp from "./loadPopUp";
                 imgContainer.style.cssText = 'display: flex; align-items: center; justify-content: center';
                 const aboutImg = document.createElement('img');
                     aboutImg.src = meImg;
-                    aboutImg.style.cssText = 'width: 80%; height 80%'
+                    aboutImg.style.cssText = 'width: 80%; height 80%';
                     
-            imgContainer.append(aboutImg)
-                
+            imgContainer.append(aboutImg);
+    
+     about.append(imgContainer, aboutContent);
 
+    const kontakt = document.createElement('div');
+        kontakt.id = 'kontakt';
+        const kontaktContainer = document.createElement('div');
+            kontaktContainer.style.cssText = 'height: 80%; width: 60%; background-color:rgb(0,0,0,0.5); display: flex; align-items: center; justify-content: space-around; padding: 10px; border-radius: 20px '
+            const myInfo = document.createElement('div');
+                myInfo.innerHTML = '<h2>Sören Modery-Diekhans<br>Wakenitzmauer 130<br>23552 Lübeck<p>s.modery-diekhans@web.de</p><p>+49(0)1723900214</p></h2>'
+            const mailForm = document.createElement('div');
+                mailForm.innerHTML = '<form class="contact-form" action="mailto:s.modery-diekhans@web.de" method="POST" enctype="text/plain"><h2>Kontakt</h2><input type="text" name="name" placeholder="Dein Name" required><input type="email" name="email" placeholder="Deine Email" required><textarea name="message" placeholder="Deine Nachricht" rows="5" required></textarea><button type="submit">Nachricht abschicken</button></form>';
+        kontaktContainer.append(myInfo, mailForm)
 
-        about.append(imgContainer, aboutContent)
+    kontakt.appendChild(kontaktContainer );
 
     const footer = document.createElement('div');
         footer.id = "footer";
@@ -154,9 +164,9 @@ import loadPopUp from "./loadPopUp";
         const agb = document.createElement('div');
             agb.innerHTML = 'AGB';
         const datenschutz = document.createElement('div');
-            datenschutz.innerHTML = 'datenschutz';
+            datenschutz.innerHTML = 'Datenschutz';
         footer.append(impressum, agb, datenschutz)
 
-    body.append(header, infoContent, serviceContent, about, footer);
+    body.append(header, infoContent, serviceContent, about, kontakt, footer);
 })();
 

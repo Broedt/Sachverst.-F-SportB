@@ -29,9 +29,11 @@ h4{
 .navbarItems {
     font-size: medium;
     cursor: pointer;
+    transition: 0.5s ease;
 }
 .navbarItems:hover {
-    font-size: large;
+    transform: scale(1.2);
+    transition: 0.5s ease;
 }
 
 #infoContent {
@@ -52,7 +54,7 @@ h4{
     background-image: url(./images/backgroundImg.png);
     background-repeat: repeat;
     background-size: 200px;
-    height: 80vh;
+    height: 85vh;
     
     display: flex;
     align-items: center;
@@ -64,8 +66,17 @@ h4{
 
 .service{
     width: 20vw;
+    cursor: pointer;
+    transition: 0.5s ease;
+    
 }
 
+.service:hover{
+    transform: scale(1.2);
+    transition: 0.5s ease;
+    
+    
+}
 .popUp {
     display: flex; 
     position: absolute; 
@@ -94,12 +105,57 @@ h4{
 }
 
 .about {
-    height: 100vh;
+    height: 85vh;
     display: flex;
     line-height: 2;
     padding-left: 100px; 
     padding-right: 100px;
 
+}
+
+#kontakt {
+    height: 85vh;
+    background-image: url(./images/IMG_9026.JPG);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f5f5dc;
+    
+}
+
+.contact-form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5vh;
+    
+}
+.contact-form button {
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover,input:hover,textarea:hover {
+    transform: scale(1.2);
+    transition: 0.5s ease;
+}
+
+.contact-form button,input,textarea {
+    transition: 0.5s ease;
+}
+
+.contact-form input {
+    width: 15vw;
+}
+
+.contact-form textarea {
+    width: 20vw;
+    height: 20vh;
 }
 
 
@@ -113,9 +169,16 @@ h4{
     gap: 30px;
     background-color: rgb(40, 42, 46);
     color: #f5f5dc;
-    font-size: x-large;
+    font-size: large;
     bottom: 0;
     left: 0;
     cursor: pointer;
     
+}
+
+#footer div {
+    cursor: pointer;
+}
+#footer div:hover {
+    text-decoration: underline;
 }

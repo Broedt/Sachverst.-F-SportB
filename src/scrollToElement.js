@@ -26,6 +26,16 @@ export default function scrollToElement (liId) {
                 top: targetPosition - offset,
                 behavior: 'smooth'
                 });
+                break
+        case 'li-3':
+            target = document.getElementById('kontakt');
+            targetPosition = target.getBoundingClientRect().top + window.scrollY;
+
+                window.scrollTo({
+                top: targetPosition - offset,
+                behavior: 'smooth'
+                });
+
     // still need to add case li-3 as soon as contetn for kontakt is created
     
   
