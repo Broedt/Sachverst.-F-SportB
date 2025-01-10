@@ -139,7 +139,7 @@ import loadPopUp from "./loadPopUp";
                 imgContainer.style.cssText = 'display: flex; align-items: center; justify-content: center';
                 const aboutImg = document.createElement('img');
                     aboutImg.src = meImg;
-                    aboutImg.style.cssText = 'width: 80%'
+                    aboutImg.style.cssText = 'width: 80%; height 80%'
                     
             imgContainer.append(aboutImg)
                 
