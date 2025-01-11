@@ -1,14 +1,17 @@
 // webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: "development",
-  entry: "./src/index.js",
+  entry:{
+    index: "./src/index.js",
+    impressum: "./src/impressum/impressum.js",
+    },
   output: {
-    filename: "main.js",
-    path: path.resolve(__dirname, "dist"),
-    clean: true,
+    filename: '[name].bundle.js', // Output JS files named after the entry point
+    path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
     extensions: ['.js', '.json', '.png']
@@ -18,9 +21,19 @@ module.exports = {
     watchFiles: ["./src/template.html"],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: "./src/template.html",
-    }),
+      new HtmlWebpackPlugin({
+        template: "./src/template.html",
+        filename: 'index.html', 
+        chunks: ['index'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/impressum/impressum.html', 
+        filename: 'impressum.html', 
+        chunks: ['impressum'], 
+      }),
+      new MiniCssExtractPlugin({
+        filename: '[name].css', 
+      }),
   ],
   module: {
     rules: [

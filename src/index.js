@@ -166,6 +166,10 @@ import loadPopUp from "./loadPopUp";
         const datenschutz = document.createElement('div');
             datenschutz.innerHTML = 'Datenschutz';
         footer.append(impressum, agb, datenschutz)
+    
+        impressum.addEventListener("click", () => {
+            window.open('impressum.html');
+        })
 
     body.append(header, infoContent, serviceContent, about, kontakt, footer);
 })();
