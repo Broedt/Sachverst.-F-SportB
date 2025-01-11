@@ -1,1 +1,0 @@
-created a landing page for my own business using mostly javascript
