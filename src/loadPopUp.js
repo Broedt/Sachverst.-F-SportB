@@ -12,6 +12,10 @@ export default function loadPopUp (service) {
             const closeBtn = document.createElement('button');
                 closeBtn.innerHTML = 'X';
                 closeBtn.style.cssText = 'background-color: red; border-radius: 5px; color: white; position: absolute; top: 5px; right: 5px'
+                closeBtn.id = 'closeBtn';
+                closeBtn.addEventListener('click', () => {
+                    popUp.classList.toggle('show');
+                })
             const imgContainer = document.createElement('div');
                 imgContainer.style.display = 'grid';
                 imgContainer.style.gridTemplateColumns = '1fr 1fr';
