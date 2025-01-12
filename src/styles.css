@@ -184,5 +184,7 @@ h4{
 }
 
 #iframe {
-    height: 85vh;
+    padding-top: 15vh;
+    height: 70vh;
+    width: 100vw;
 }

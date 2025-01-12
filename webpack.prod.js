@@ -10,7 +10,7 @@ module.exports = {
     impressum: "./src/footerContent/impressum.js",
     agb: "./src/footerContent/agb.js",
     datenschutz: "./src/footerContent/datenschutz.js"
-  },
+    },
   output: {
     filename: '[name].bundle.js', // Output JS files named after the entry point
     path: path.resolve(__dirname, 'dist'),
@@ -23,38 +23,36 @@ module.exports = {
     watchFiles: ["./src/template.html"],
   },
   plugins: [
-        new HtmlWebpackPlugin({
-          template: "./src/template.html",
-          filename: 'index.html', 
-          chunks: ['index'],
-        }),
-        new HtmlWebpackPlugin({
-          template: './src/footerContent/impressum.html', 
-          filename: 'impressum.html', 
-          chunks: ['impressum'], 
-        }),
-        new HtmlWebpackPlugin({
-          template: './src/footerContent/agb.html', 
-          filename: 'agb.html', 
-          chunks: ['agb'], 
-        }),
-        new HtmlWebpackPlugin({
-          template: './src/footerContent/datenschutz.html', 
-          filename: 'datenschutz.html', 
-          chunks: ['datenschutz'], 
-        }),
-        new MiniCssExtractPlugin({
-          filename: '[name].css', 
-        }),
-    ],
+      new HtmlWebpackPlugin({
+        template: "./src/template.html",
+        filename: 'index.html', 
+        chunks: ['index'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/footerContent/impressum.html', 
+        filename: 'impressum.html', 
+        chunks: ['impressum'], 
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/footerContent/agb.html', 
+        filename: 'agb.html', 
+        chunks: ['agb'], 
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/footerContent/datenschutz.html', 
+        filename: 'datenschutz.html', 
+        chunks: ['datenschutz'], 
+      }),
+      new MiniCssExtractPlugin({
+        filename: '[name].css', 
+      }),
+  ],
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader,
-        'css-loader','style-loader'
-      ]
-    },
+        use: ["style-loader", "css-loader"],
+      },
       {
         test: /\.html$/i,
         loader: "html-loader",
