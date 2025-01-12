@@ -6,8 +6,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   mode: "production",
   entry:{
-  index: "./src/index.js",
-  impressum: "./src/impressum/impressum.js",
+    index: "./src/index.js",
+    impressum: "./src/footerContent/impressum.js",
+    agb: "./src/footerContent/agb.js",
+    datenschutz: "./src/footerContent/datenschutz.js"
   },
   output: {
     filename: '[name].bundle.js', // Output JS files named after the entry point
@@ -21,20 +23,30 @@ module.exports = {
     watchFiles: ["./src/template.html"],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: "./src/template.html",
-      filename: 'index.html', 
-      chunks: ['index'],
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/impressum/impressum.html', 
-      filename: 'impressum.html', 
-      chunks: ['impressum'], 
-    }),
-    new MiniCssExtractPlugin({
-      filename: '[name].css', 
-    }),
-  ],
+        new HtmlWebpackPlugin({
+          template: "./src/template.html",
+          filename: 'index.html', 
+          chunks: ['index'],
+        }),
+        new HtmlWebpackPlugin({
+          template: './src/footerContent/impressum.html', 
+          filename: 'impressum.html', 
+          chunks: ['impressum'], 
+        }),
+        new HtmlWebpackPlugin({
+          template: './src/footerContent/agb.html', 
+          filename: 'agb.html', 
+          chunks: ['agb'], 
+        }),
+        new HtmlWebpackPlugin({
+          template: './src/footerContent/datenschutz.html', 
+          filename: 'datenschutz.html', 
+          chunks: ['datenschutz'], 
+        }),
+        new MiniCssExtractPlugin({
+          filename: '[name].css', 
+        }),
+    ],
   module: {
     rules: [
       {
