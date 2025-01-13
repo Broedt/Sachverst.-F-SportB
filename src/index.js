@@ -8,7 +8,25 @@ import meImg from './images/aboutme.jpg';
 import scrollToElement from "./scrollToElement";
 import loadPopUp from "./loadPopUp";
 
-
+const imagesToPreload = [
+    require('./images/beratungImg1.JPG'),
+    require('./images/beratungImg2.JPG'),
+    require('./images/beratungImg3.JPG'),
+    require('./images/beratungImg6.JPG'),
+    require('./images/gutachtenImg1.jpg'),
+    require('./images/gutachtenImg2.jpeg'),
+    require('./images/gutachtenImg3.jpg'),
+    require('./images/gutachtenImg4.jpg'),
+    require('./images/diy1.jpeg'),
+    require('./images/diy2.jpeg'),
+    require('./images/bugstrahl4.png'),
+    require('./images/bugstrahl3.png')
+  ];
+  
+  imagesToPreload.forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
 
 
 
