@@ -4,8 +4,10 @@ import logo1 from './images/SMD_Farbversion_2';
 import picture1 from './images/pexels-sebastian-palomino-2847765.jpg';
 import meImg from './images/aboutme.jpg';
 
+
 import scrollToElement from "./scrollToElement";
 import loadPopUp from "./loadPopUp";
+
 
 
 
@@ -87,9 +89,10 @@ const main = document.createElement('div');
                         gutachtenText.innerHTML = 'SchadenGutachten, WertGutachten, Kurzgutachten'
                     gutachten.append(gutachtenImg, gutachtenHeading, gutachtenText);
                     gutachten.addEventListener("click", () => {
-                        loadPopUp ();
-                            
+                        loadPopUp ("g"); 
                     });
+                    
+
 
                 const beratung = document.createElement('div');
                     beratung.classList = 'service';
@@ -101,10 +104,11 @@ const main = document.createElement('div');
                     const beratungText = document.createElement('div');
                         beratungText.innerHTML = 'Kauf- & Verkaufsberatung, Investitionsberatung, Reparaturabnahmen'
                 beratung.append(beratungImg,beratungHeading, beratungText);
-                beratung.addEventListener("click", () => {
-                    loadPopUp ();
-                        
-                });
+
+                    beratung.addEventListener("click", () => {
+                            loadPopUp ("b");
+                            });
+                
 
                 const support = document.createElement('div');
                     support.classList = 'service';
@@ -117,7 +121,7 @@ const main = document.createElement('div');
                         supportText.innerHTML = 'Fachmännische, individuelle Beratung bei der Umsetzung von DIY Projecten'
                 support.append(supportImg, supportHeading, supportText);
                 support.addEventListener("click", () => {
-                    loadPopUp ();
+                    loadPopUp ("d");
                         
                 });
 
