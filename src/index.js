@@ -83,6 +83,7 @@ const main = document.createElement('div');
 
                 const picture = document.createElement('img')
                     picture.src = picture1;
+                    picture.alt = "festgemachtes Segelboot"
 
         infoContent.append(text, picture)
 
@@ -100,6 +101,7 @@ const main = document.createElement('div');
                     gutachten.classList = 'service';
                     const gutachtenImg = document.createElement('div');
                             gutachtenImg.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="20vh" viewBox="0 0 24 24"><title>file-document</title><path d="M13,9H18.5L13,3.5V9M6,2H14L20,8V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V4C4,2.89 4.89,2 6,2M15,18V16H6V18H15M18,14V12H6V14H18Z" /></svg>'
+                            gutachtenImg.alt = "Piktogram eines Dokuments"
                             gutachtenImg.style.fill = 'beige';
                     const gutachtenHeading = document.createElement('div');
                         gutachtenHeading.innerHTML = '<h3>Gutachten</h3>';
@@ -116,6 +118,7 @@ const main = document.createElement('div');
                     beratung.classList = 'service';
                     const beratungImg = document.createElement('div');
                         beratungImg.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="20vh" viewBox="0 0 24 24"><title>sail-boat</title><path d="M3 13.5L11 2.03V13.5H3M12.5 13.5C13.85 9.75 13.67 4.71 12.5 1C17.26 2.54 20.9 8.4 20.96 13.5H12.5M21.1 17.08C20.69 17.72 20.21 18.27 19.65 18.74C19 18.45 18.42 18 17.96 17.5C16.47 19.43 13.46 19.43 11.97 17.5C10.5 19.43 7.47 19.43 6 17.5C5.5 18 4.95 18.45 4.3 18.74C3.16 17.8 2.3 16.46 2 15H21.94C21.78 15.75 21.5 16.44 21.1 17.08M20.96 23C19.9 23 18.9 22.75 17.96 22.25C16.12 23.25 13.81 23.25 11.97 22.25C10.13 23.25 7.82 23.25 6 22.25C4.77 22.94 3.36 23.05 2 23V21C3.41 21.05 4.77 20.9 6 20C7.74 21.25 10.21 21.25 11.97 20C13.74 21.25 16.2 21.25 17.96 20C19.17 20.9 20.54 21.05 21.94 21V23H20.96Z" /></svg>';
+                        beratungImg.alt= "Piktogram eines Segelboots";
                         beratungImg.style.fill = 'beige';
                     const beratungHeading = document.createElement('div');
                         beratungHeading.innerHTML = '<h3>Beratung</h3>';
@@ -132,9 +135,10 @@ const main = document.createElement('div');
                     support.classList = 'service';
                     const supportImg = document.createElement('div');
                         supportImg.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="20vh" viewBox="0 0 24 24"><title>hand-saw</title><path d="M9.8,17L5.9,11.6L20,2L22,5V8H19V11H16V14H13V17M9.7,18.7L9.2,21.5L7.6,22.7C6.7,23.3 5.5,23.1 4.8,22.2L1.3,17.3C0.7,16.4 0.9,15.2 1.8,14.5L5.1,12.2L9.7,18.7M4.6,15L3,16.1L6.5,21L8.1,19.8L4.6,15Z" /></svg>'
+                        supportImg.alt = "Piktogram einer Säge";
                         supportImg.style.fill = 'beige';
                     const supportHeading = document.createElement('div');
-                        supportHeading.innerHTML = '<h3>DIY-Unterastützung</h3>';
+                        supportHeading.innerHTML = '<h3>DIY-Unterstützung</h3>';
                     const supportText = document.createElement('div');
                         supportText.innerHTML = 'Fachmännische, individuelle Beratung bei der Umsetzung von DIY Projecten'
                 support.append(supportImg, supportHeading, supportText);
@@ -158,6 +162,7 @@ const main = document.createElement('div');
                     const aboutImg = document.createElement('img');
                         aboutImg.src = meImg;
                         aboutImg.id = "aboutImg";
+                        aboutImg.alt = "Sören Modery-Diekhans, Sachverständiger für Sportboote;"
                         
                 imgContainer.append(aboutImg);
         
